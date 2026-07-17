@@ -1,18 +1,18 @@
-def func():
-    print("Hello")
+# def func():
+#     print("Hello")
 
-func()
+# func()
 
 # Real functions can take parameters and return values. Here's an example of a function that takes two numbers as parameters and returns their sum:
-def function_name (param1, param2):
+# def function_name (param1, param2):
     # statements can be exexuted here
-    value = param1 + param2
+    # value = param1 + param2
     # return statement can be used to return a value from the function
-    return value
+    # return value
 
 # calling the function and storing the returned value in a variable
-result = function_name(5, 10)
-print(result)
+# result = function_name(5, 10)
+# print(result)
 
 
 # Functions can have default parameters, keyword parameters, and variable-length parameters. 
@@ -60,18 +60,14 @@ def multiply_numbers(*args):
     return total
 
 def divide_numbers(*args):
-    try:
-        if not args:
-            return 0
-        total = args[0]
-        for num in args[1:]:
-            if num == 0:
-                raise ValueError("Cannot divide by zero.")
-            total /= num
-        return total
-    except ValueError as e:
-        print(e)
-        return None
+    if not args:
+        return 0
+    total = args[0]
+    for num in args[1:]:
+        if num == 0:
+            raise ValueError("Cannot divide by zero.")
+        total /= num
+    return total
 
 def power_numbers(base, exponent=1):
     return base ** exponent
@@ -82,47 +78,9 @@ def power_numbers(base, exponent=1):
 def calculator(func, *args):
     return func(*args)
 
-result = calculator(power_numbers, 2, 3)
-print(result) # returns 8
+# result = calculator(power_numbers, 2, 3)
+# print(result) # returns 8
 
 # Now, Let's take the input from the user and pass them to calculator function.
 # User will choose the operation too.
 
-operation = int(input("Choose an operation: 1 for addition, 2 for subtraction, 3 for multiplication, 4 for division, 5 for power: "))
-numbers_count = int(input("Enter the number of numbers you want to perform the operation on: "))
-
-if numbers_count < 1:
-    print("Number of numbers should be at least 1.")
-    exit()
-
-numbers = []
-while numbers_count > 0:
-    input_number = int(input("Enter the number: "))
-    numbers.append(input_number)
-    numbers_count -= 1
-
-if operation == 1:
-    result = calculator(add_numbers, *numbers)
-    print(f"The sum of the numbers is: {result}")
-elif operation == 2:
-    result = calculator(subtract_numbers, *numbers)
-    print(f"The difference of the numbers is: {result}")
-elif operation == 3:
-    result = calculator(multiply_numbers, *numbers)
-    print(f"The product of the numbers is: {result}")
-elif operation == 4:
-    result = calculator(divide_numbers, *numbers)
-    print(f"The quotient of the numbers is: {result}")
-elif operation == 5:
-    base = numbers[0]
-    if len(numbers) == 1:
-        print("For one number, the exponent will be considered as 1.")
-        exponent = 1
-    else:
-        if len(numbers) > 1:
-            exponent = numbers[1]
-
-    result = calculator(power_numbers, base, exponent)
-    print(f"The result of {base} raised to the power of {exponent} is: {result}")
-
-print("Successfully completed the operation.")

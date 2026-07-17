@@ -209,3 +209,5 @@ Practiced:
 * Higher-order functions make code reusable.
 * Exceptions should be raised where the problem occurs and handled where the application decides how to respond.
 
+# Final notes:
+We have covered practicing with functions, parameters, arguments, *args, **kwargs,  Higher-order functions, Exceptions, modules, refactoring, ssh_setup.
