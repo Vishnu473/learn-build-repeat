@@ -11,6 +11,8 @@
 
 **Aggregate functions** - sum, min, max, sorted, reversed
 
+# Day:3 - Day:2 Continued - 18-Jul-2026
+
 **Truthy functions** - all, any
 
 **type conversions** - int, float, str, bool, list, tuple, set, dict
