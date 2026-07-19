@@ -16,3 +16,11 @@
 **Truthy functions** - all, any
 
 **type conversions** - int, float, str, bool, list, tuple, set, dict
+
+# Day:4 - 19-July-2026
+
+**Iterables** - list, tuple, set, dictionary, string
+
+**Iterator** - Understand, create own iterators, build own iterable using iterator
+
+**Yield** - understand yield and return
